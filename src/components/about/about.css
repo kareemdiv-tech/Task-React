@@ -64,34 +64,184 @@
     color: var(--color-light);
 }
 
+/* =====================================================
+   LAPTOP
+   1025px - 1439px
+===================================================== */
 
-/* media queries tablet */
-@media (max-width:1024px) {
+@media screen and (max-width: 1439px) {
+
     .about_container {
-        grid-template-columns: 1fr;
-        gap: 0;
+        width: 90%;
+        margin-inline: auto;
     }
 
-    .about_me {
-        width: 50%;
-        margin: 2rem auto 4rem;
-    }
-
-    .about_content p {
-        margin: 1rem 0 1.5rem;
-    }
 }
 
-@media (max-width:600px) {
+
+/* =====================================================
+   TABLET
+   768px - 1024px
+===================================================== */
+
+@media screen and (max-width: 1024px) {
+
+    .about_container {
+        width: 85%;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
     .about_me {
-        width: 65%;
-        margin: 0rem auto 3rem;
+        width: 100%;
     }
-    .about_cards{
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+
+    .about_me_image {
+        width: min(50vw, 320px);
     }
-        .about_content p{
-            margin: 1.5rem 0;
-        }
+
+    .about_content {
+        text-align: center;
+    }
+
+    .about_content>p {
+        margin-inline: auto;
+        max-width: 700px;
+    }
+
+}
+
+
+/* =====================================================
+   LARGE MOBILE
+   481px - 767px
+===================================================== */
+
+@media screen and (max-width: 767px) {
+
+    .about_container {
+        width: 90%;
+        gap: 2.5rem;
+    }
+
+    .about_me_image {
+        width: min(65vw, 280px);
+    }
+
+    .about_cards {
+        gap: 0.7rem;
+    }
+
+    .about_card {
+        padding: 1rem 0.5rem;
+    }
+
+    .about_content>p {
+        font-size: 0.9rem;
+        line-height: 1.8;
+        margin-block: 1.5rem;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   376px - 480px
+===================================================== */
+
+@media screen and (max-width: 480px) {
+
+    .about_container {
+        width: 92%;
+        gap: 2rem;
+    }
+
+    .about_me_image {
+        width: min(70vw, 260px);
+        border-radius: 1.5rem;
+    }
+
+    .about_cards {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .about_card {
+        width: 100%;
+        padding: 1.1rem;
+    }
+
+    .about_icon {
+        font-size: 1.5rem;
+    }
+
+    .about_card h5 {
+        font-size: 0.9rem;
+    }
+
+    .about_card small {
+        font-size: 0.7rem;
+    }
+
+    .about_content>p {
+        font-size: 0.85rem;
+        line-height: 1.8;
+    }
+
+    .about_content .btn {
+        width: auto;
+        min-width: 130px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+   320px - 375px
+===================================================== */
+
+@media screen and (max-width: 375px) {
+
+    .about_container {
+        width: 94%;
+        gap: 1.7rem;
+    }
+
+    .about_me_image {
+        width: min(72vw, 230px);
+        border-radius: 1.3rem;
+    }
+
+    .about_card {
+        padding: 1rem;
+    }
+
+    .about_content>p {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   أقل من 320px
+===================================================== */
+
+@media screen and (max-width: 319px) {
+
+    .about_container {
+        width: 95%;
+    }
+
+    .about_me_image {
+        width: 75vw;
+    }
+
+    .about_content>p {
+        font-size: 0.75rem;
+    }
+
 }

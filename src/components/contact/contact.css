@@ -59,52 +59,210 @@
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* =====================================================
+   LAPTOP
+   1025px - 1439px
+===================================================== */
 
-@media screen and (max-width: 1024px) {
-    .contact_container {
-        width: 80%;
-        grid-template-columns: 35% 55%;
-        gap: 10%;
-    }
+@media screen and (max-width: 1439px) {
+
+  .contact_container {
+    width: 85%;
+  }
+
 }
 
 
-/* =========================
+/* =====================================================
+   TABLET
+   768px - 1024px
+===================================================== */
+
+@media screen and (max-width: 1024px) {
+
+  .contact_container {
+    width: 85%;
+
+    grid-template-columns:
+      minmax(200px, 0.8fr)
+      minmax(280px, 1.2fr);
+
+    gap: 2.5rem;
+  }
+
+  .contact_option {
+    padding: 1rem;
+  }
+
+  .contact_option svg {
+    font-size: 1.8rem;
+  }
+
+  .contact_container form input,
+  .contact_container form textarea {
+    padding: 1rem;
+  }
+
+}
+
+
+/* =====================================================
+   LARGE MOBILE
+   481px - 767px
+===================================================== */
+
+@media screen and (max-width: 767px) {
+
+  .contact_container {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+  }
+
+  .contact_options {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1rem;
+  }
+
+  .contact_option {
+    padding: 1rem;
+  }
+
+  .contact_option svg {
+    font-size: 1.7rem;
+  }
+
+  .contact_container form {
+    width: 100%;
+  }
+
+  .contact_container form input,
+  .contact_container form textarea {
+    width: 100%;
+    padding: 1rem;
+  }
+
+}
+
+
+/* =====================================================
    MOBILE
-========================= */
+   376px - 480px
+===================================================== */
 
-@media screen and (max-width: 600px) {
-    .contact_container {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
+@media screen and (max-width: 480px) {
 
-    .contact_options {
-        width: 100%;
-    }
+  .contact_container {
+    width: 92%;
+  }
 
-    .contact_option {
-        padding: 1rem;
-    }
+  .contact_options {
+    grid-template-columns: 1fr;
+  }
 
-    .contact_container form {
-        width: 100%;
-        gap: 20px;
-    }
+  .contact_option {
+    padding: 1.2rem;
+  }
 
-    .contact_container form input,
-    .contact_container form textarea {
-        width: 100%;
-        padding: 1rem;
-    }
+  .contact_option svg {
+    font-size: 1.8rem;
+  }
 
-    .contact_container form button {
-        font-size: 12px;
-        padding: 12px 25px;
-    }
+  .contact_option a {
+    font-size: 0.75rem;
+
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+  }
+
+  .contact_container form {
+    gap: 1rem;
+  }
+
+  .contact_container form input,
+  .contact_container form textarea {
+    padding: 0.9rem;
+
+    font-size: 0.9rem;
+  }
+
+  .contact_container form textarea {
+    min-height: 130px;
+  }
+
+  .contact_container form button {
+    width: 100%;
+
+    font-size: 0.85rem;
+
+    padding: 0.9rem 1rem;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+   320px - 375px
+===================================================== */
+
+@media screen and (max-width: 375px) {
+
+  .contact_container {
+    width: 94%;
+  }
+
+  .contact_option {
+    padding: 1rem 0.7rem;
+  }
+
+  .contact_option svg {
+    font-size: 1.6rem;
+  }
+
+  .contact_option h5 {
+    font-size: 0.85rem;
+  }
+
+  .contact_option a {
+    font-size: 0.7rem;
+  }
+
+  .contact_container form input,
+  .contact_container form textarea {
+    padding: 0.8rem;
+
+    font-size: 0.85rem;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   أقل من 320px
+===================================================== */
+
+@media screen and (max-width: 319px) {
+
+  .contact_container {
+    width: 95%;
+  }
+
+  .contact_option {
+    padding: 0.9rem 0.5rem;
+  }
+
+  .contact_container form button {
+    font-size: 0.8rem;
+  }
+
 }

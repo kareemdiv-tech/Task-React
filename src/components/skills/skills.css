@@ -75,31 +75,243 @@
 }
 
 
-/* ==================== Tablet ==================== */
+/* ====================
+   LARGE SCREENS
+==================== */
 
-@media (max-width: 900px) {
-
+@media screen and (min-width: 1440px) {
     .container_skills {
-        flex-wrap: wrap;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 2rem;
     }
 
     .card_skill {
-        flex: 0 0 calc(50% - 10px);
+        padding: 2rem;
     }
 
+    .card_skill .icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .card_skill .icon img {
+        width: 3.3rem;
+        height: 3.3rem;
+    }
 }
 
+/* ====================
+   LAPTOP
+==================== */
 
-/* ==================== Mobile ==================== */
+@media screen and (max-width: 1200px) {
+    .container_skills {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.2rem;
+    }
 
-@media (max-width: 600px) {
+    .card_skill {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* ====================
+   TABLET
+==================== */
+
+@media screen and (max-width: 1024px) {
+    .container_skills {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.2rem;
+    }
+
+    .card_skill {
+        padding: 1.5rem;
+    }
+
+    .card_skill .icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .card_skill .icon img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .card_skill .content h4 {
+        font-size: 1rem;
+    }
+
+    .card_skill .content p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ====================
+   SMALL TABLET
+==================== */
+
+@media screen and (max-width: 767px) {
+    .skills {
+        padding: 2.5rem 0;
+    }
 
     .container_skills {
-        flex-direction: column;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .card_skill {
+        padding: 1.3rem 1rem;
+    }
+
+    .card_skill .icon {
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .card_skill .icon img {
+        width: 2.7rem;
+        height: 2.7rem;
+    }
+
+    .card_skill .content h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card_skill .content p {
+        font-size: 0.75rem;
+    }
+}
+
+/* ====================
+   MOBILE
+==================== */
+
+@media screen and (max-width: 600px) {
+    .container_skills {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .card_skill {
         width: 100%;
+        padding: 1.5rem 1.2rem;
     }
 
+    .card_skill .icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .card_skill .icon img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .card_skill .content h4 {
+        font-size: 1rem;
+    }
+
+    .card_skill .content p {
+        max-width: 500px;
+        margin-inline: auto;
+        font-size: 0.8rem;
+    }
+}
+
+/* ====================
+   SMALL MOBILE
+==================== */
+
+@media screen and (max-width: 480px) {
+    .skills {
+        padding: 2rem 0;
+    }
+
+    .container_skills {
+        gap: 0.9rem;
+    }
+
+    .card_skill {
+        padding: 1.3rem 1rem;
+        border-radius: 0.9rem;
+    }
+
+    .card_skill .icon {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    .card_skill .icon img {
+        width: 2.7rem;
+        height: 2.7rem;
+    }
+
+    .card_skill .content h4 {
+        font-size: 0.95rem;
+    }
+
+    .card_skill .content p {
+        font-size: 0.75rem;
+        line-height: 1.7;
+    }
+}
+
+/* ====================
+   VERY SMALL PHONES
+==================== */
+
+@media screen and (max-width: 375px) {
+    .card_skill {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .card_skill .icon {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .card_skill .icon img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .card_skill .content h4 {
+        font-size: 0.9rem;
+    }
+
+    .card_skill .content p {
+        font-size: 0.7rem;
+    }
+}
+
+/* ====================
+   EXTRA SMALL DEVICES
+==================== */
+
+@media screen and (max-width: 319px) {
+    .container_skills {
+        gap: 0.7rem;
+    }
+
+    .card_skill {
+        padding: 1rem 0.7rem;
+    }
+
+    .card_skill .icon img {
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+
+    .card_skill .content h4 {
+        font-size: 0.85rem;
+    }
+
+    .card_skill .content p {
+        font-size: 0.68rem;
+    }
 }

@@ -59,35 +59,250 @@
 }
 
 
-/* ==================== Tablet ==================== */
 
-@media (max-width: 900px) {
+/* =========================
+   LARGE SCREENS
+========================= */
 
-    .projects_container {
-        gap: 20px;
-    }
+@media screen and (min-width: 1440px) {
+  .projects_container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.2rem;
+  }
 
-    .projects_container .portfolio_item {
-        width: 47%;
-    }
+  .portfolio_item_img {
+    height: 250px;
+  }
 
+  .portfolio_item h3 {
+    margin: 1.5rem 1.3rem 1.7rem;
+  }
+
+  .portfolio_item_btns {
+    width: calc(100% - 2.6rem);
+    margin-inline: 1.3rem;
+    margin-bottom: 1.3rem;
+  }
 }
 
+/* =========================
+   LAPTOP
+========================= */
 
-/* ==================== Mobile ==================== */
+@media screen and (max-width: 1200px) {
+  .projects_container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
 
-@media (max-width: 600px) {
+  .portfolio_item_img {
+    height: 210px;
+  }
 
-    .projects_container {
-        flex-direction: column;
-    }
+  .portfolio_item h3 {
+    margin: 1.1rem 1rem 1.3rem;
+  }
 
-    .projects_container .portfolio_item {
-        width: 100%;
-    }
+  .portfolio_item_btns {
+    width: calc(100% - 2rem);
+    margin-inline: 1rem;
+    margin-bottom: 1rem;
+  }
+}
 
-    .portfolio_item_img {
-        height: 200px;
-    }
+/* =========================
+   TABLET
+========================= */
 
+@media screen and (max-width: 1024px) {
+  .projects_container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .portfolio_item_img {
+    height: 210px;
+  }
+
+  .portfolio_item h3 {
+    font-size: 1.05rem;
+  }
+
+  .portfolio_item_btns {
+    gap: 0.7rem;
+  }
+
+  .portfolio_item_btns .btn {
+    min-width: 90px;
+  }
+}
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media screen and (max-width: 767px) {
+  .projects_container {
+    width: 100%;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1rem;
+  }
+
+  .portfolio_item {
+    border-radius: 1rem;
+  }
+
+  .portfolio_item_img {
+    height: 190px;
+    border-radius: 0.8rem;
+  }
+
+  .portfolio_item h3 {
+    margin: 1rem 0.9rem 1.1rem;
+    font-size: 1rem;
+  }
+
+  .portfolio_item_btns {
+    width: calc(100% - 1.8rem);
+
+    margin-inline: 0.9rem;
+    margin-bottom: 0.9rem;
+
+    gap: 0.6rem;
+  }
+
+  .portfolio_item_btns .btn {
+    min-width: 0;
+    padding: 0.7rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+  .projects_container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .projects_container .portfolio_item {
+    width: 100%;
+  }
+
+  .portfolio_item_img {
+    height: clamp(190px, 55vw, 240px);
+  }
+
+  .portfolio_item h3 {
+    margin: 1.1rem 1rem 1.3rem;
+    font-size: 1.05rem;
+  }
+
+  .portfolio_item_btns {
+    width: calc(100% - 2rem);
+
+    margin-inline: 1rem;
+    margin-bottom: 1rem;
+
+    gap: 0.7rem;
+  }
+
+  .portfolio_item_btns .btn {
+    min-width: 110px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media screen and (max-width: 480px) {
+  .projects_container {
+    gap: 1.3rem;
+  }
+
+  .portfolio_item_img {
+    height: 210px;
+  }
+
+  .portfolio_item h3 {
+    margin: 1rem 0.9rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .portfolio_item_btns {
+    width: calc(100% - 1.8rem);
+
+    margin-inline: 0.9rem;
+    margin-bottom: 0.9rem;
+
+    flex-direction: column;
+  }
+
+  .portfolio_item_btns .btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media screen and (max-width: 375px) {
+  .projects_container {
+    gap: 1rem;
+  }
+
+  .portfolio_item {
+    border-radius: 0.9rem;
+  }
+
+  .portfolio_item_img {
+    height: 190px;
+  }
+
+  .portfolio_item h3 {
+    margin: 0.9rem 0.8rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .portfolio_item_btns {
+    width: calc(100% - 1.6rem);
+
+    margin-inline: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .portfolio_item_btns .btn {
+    padding: 0.7rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+
+@media screen and (max-width: 319px) {
+  .projects_container {
+    gap: 0.8rem;
+  }
+
+  .portfolio_item_img {
+    height: 170px;
+  }
+
+  .portfolio_item h3 {
+    font-size: 0.9rem;
+  }
+
+  .portfolio_item_btns .btn {
+    font-size: 0.75rem;
+  }
 }

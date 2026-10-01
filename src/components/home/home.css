@@ -67,31 +67,288 @@
 }
 
 
-/* responsive */
-@media (max-width:1024px) {
-    .home {
-        height: 68vh;
-    }
+/* =========================
+   LARGE SCREENS
+========================= */
 
+@media screen and (min-width: 1440px) {
+  .home {
+    padding-top: 4rem;
+  }
+
+  .home_container {
+    width: min(85%, 1300px);
+    min-height: calc(100vh - 4rem);
+  }
+
+  .home_container .me {
+    width: 360px;
+  }
+
+  .me img {
+    width: 330px;
+    height: 330px;
+  }
+
+  .home_socials {
+    left: 1rem;
+  }
+
+  .scroll_down {
+    right: -2.5rem;
+  }
 }
 
+/* =========================
+   LAPTOP
+========================= */
 
-@media (max-width:600px) {
-    .home {
-        height: auto;
-        padding: 5rem;
+@media screen and (max-width: 1439px) {
+  .home_container {
+    width: 90%;
+  }
+}
 
-        .scroll_down,
-        .home_socials {
-            display: none;
-        }
-    }
-    .home h1{
-        font-size: 2rem;
-    }
-    .home_container .me {
-        max-width: 100%;
-        width: 380px;
-        height: 380px;
-    }
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 1024px) {
+  .home {
+    min-height: 75vh;
+    padding-top: 2rem;
+  }
+
+  .home_container {
+    min-height: calc(75vh - 2rem);
+    width: 90%;
+  }
+
+  .home_container .me {
+    width: min(300px, 65vw);
+    padding: 1.2rem;
+  }
+
+  .me img {
+    width: 270px;
+    height: 270px;
+  }
+
+  .home_socials {
+    bottom: 2rem;
+  }
+
+  .scroll_down {
+    bottom: 4rem;
+    right: -1.8rem;
+  }
+}
+
+/* =========================
+   SMALL TABLET / LARGE MOBILE
+========================= */
+
+@media screen and (max-width: 767px) {
+  .home {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .home_container {
+    width: 92%;
+    min-height: auto;
+
+    justify-content: flex-start;
+  }
+
+  .home_container h4 {
+    font-size: 1.1rem;
+  }
+
+  .home_container h1 {
+    font-size: clamp(2rem, 8vw, 2.7rem);
+  }
+
+  .home_container h2 {
+    font-size: 1.1rem;
+  }
+
+  .btns {
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .home_container .me {
+    width: min(280px, 70vw);
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .me img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .home_socials,
+  .scroll_down {
+    display: none;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+  .home {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .home_container {
+    width: 92%;
+  }
+
+  .home_container h4 {
+    font-size: 1rem;
+  }
+
+  .home_container h1 {
+    font-size: 2rem;
+  }
+
+  .home_container h2 {
+    font-size: 1rem;
+  }
+
+  .btns {
+    width: 100%;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+  }
+
+  .btns .btn {
+    min-width: 110px;
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .home_container .me {
+    width: min(260px, 75vw);
+    padding: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .me img {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media screen and (max-width: 480px) {
+  .home {
+    padding-top: 1rem;
+  }
+
+  .home_container {
+    width: 94%;
+  }
+
+  .home_container h4 {
+    font-size: 0.9rem;
+  }
+
+  .home_container h1 {
+    font-size: 1.8rem;
+  }
+
+  .home_container h2 {
+    font-size: 0.9rem;
+  }
+
+  .btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.7rem;
+  }
+
+  .btns .btn {
+    width: min(100%, 180px);
+  }
+
+  .home_container .me {
+    width: min(230px, 65vw);
+    padding: 0.7rem;
+  }
+
+  .me img {
+    width: 210px;
+    height: 210px;
+    border-width: 3px;
+  }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media screen and (max-width: 375px) {
+  .home_container h4 {
+    font-size: 0.85rem;
+  }
+
+  .home_container h1 {
+    font-size: 1.6rem;
+  }
+
+  .home_container h2 {
+    font-size: 0.85rem;
+  }
+
+  .home_container .me {
+    width: min(210px, 65vw);
+  }
+
+  .me img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .btns .btn {
+    width: 170px;
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+
+@media screen and (max-width: 319px) {
+  .home_container {
+    width: 95%;
+  }
+
+  .home_container h1 {
+    font-size: 1.45rem;
+  }
+
+  .home_container .me {
+    width: 180px;
+    padding: 0.5rem;
+  }
+
+  .me img {
+    width: 165px;
+    height: 165px;
+  }
+
+  .btns .btn {
+    width: 150px;
+  }
 }
