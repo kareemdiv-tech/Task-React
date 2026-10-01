@@ -4,23 +4,26 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  
+
+  "engines": {
+    "node": "20.x"
+  },
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "engines": {
-     "node": "20.x"
-}
+    "deploy": "gh-pages -d dist"
   },
+
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
+
   "devDependencies": {
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
