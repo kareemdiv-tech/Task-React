@@ -1,0 +1,105 @@
+/* ==================== Skills ==================== */
+
+.skills {
+    padding: 50px 0;
+}
+
+/* Title */
+.top_section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Cards Container */
+.container_skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+/* Card */
+.card_skill {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 25px;
+
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    background: transparent;
+
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.card_skill:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: var(--color-bg-variant);
+    transform: translateY(-5px);
+}
+
+/* Icon */
+.card_skill .icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon Image */
+.card_skill .icon img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+}
+
+/* Card Title */
+.card_skill .content h4 {
+    margin-bottom: 10px;
+}
+
+/* Card Description */
+.card_skill .content p {
+    margin: 0;
+}
+
+
+/* ==================== Tablet ==================== */
+
+@media (max-width: 900px) {
+
+    .container_skills {
+        flex-wrap: wrap;
+    }
+
+    .card_skill {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+}
+
+
+/* ==================== Mobile ==================== */
+
+@media (max-width: 600px) {
+
+    .container_skills {
+        flex-direction: column;
+    }
+
+    .card_skill {
+        width: 100%;
+    }
+
+}
